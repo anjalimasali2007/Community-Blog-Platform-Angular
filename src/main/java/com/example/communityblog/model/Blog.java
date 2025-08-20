@@ -24,22 +24,22 @@ public class Blog
     private String content;
 
     @Column(nullable = false)
-    private String authorName;
+    private String author;
 
     @Column(nullable = false)
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
     @Column(nullable = false)
-    private LocalDateTime lastUpdatedt;
+    private LocalDateTime lastUpdatedAt;
 
     @PrePersist
     protected void onCreate() {
-        createAt = LocalDateTime.now();
-        lastUpdatedt = LocalDateTime.now();
+        createdAt = LocalDateTime.now();
+        lastUpdatedAt = LocalDateTime.now();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        lastUpdatedt = LocalDateTime.now();
+        lastUpdatedAt = LocalDateTime.now();
     }
 }

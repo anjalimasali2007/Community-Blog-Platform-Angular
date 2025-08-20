@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="toolbar">
+    <h1>Community Blog Platform</h1>
+    <div class="actions">
+      <input
+        class="search"
+        type="text"
+        placeholder="Search title/author/content…"
+        [(ngModel)]="q"
+        (ngModelChange)="applyFilter()"
+      />
+      <button class="btn ghost" (click)="clearSearch()" [disabled]="!q">Clear</button>
+      <a class="btn primary" routerLink="/blogs/new">+ New Blog</a>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="info">Loading…</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+ 
+
+  <div class="card-list" *ngIf="filtered.length">
+  <div class="blog-card" *ngFor="let b of filtered; trackBy: trackById">
+    <h2>
+      <a [routerLink]="['/blogs', b.id]">{{ b.title }}</a>
+    </h2>
+    <div class="meta">
+      <span>{{ b.author || '—' }}</span>
+      <span>•</span>
+      <span>{{ b.createdAt | date: 'medium' }}</span>
+    </div>
+    <div class="actions">
+      <a class="btn" [routerLink]="['/blogs', b.id, 'edit']">Edit</a>
+      <button class="btn danger" (click)="delete(b.id)">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="card" *ngIf="!loading && filtered.length === 0">
+  No blogs found.
+</div>
+
+
+
+</div>

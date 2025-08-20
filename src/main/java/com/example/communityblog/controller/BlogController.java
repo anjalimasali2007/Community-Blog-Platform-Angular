@@ -14,7 +14,7 @@ public class BlogController {
     @Autowired
     private BlogService blogService;
 
-    @PostMapping("/create")
+    @PostMapping
     public Blog createBlog(@RequestBody Blog blog) {
         return blogService.createBlog(blog);
     }
@@ -29,12 +29,12 @@ public class BlogController {
         return blogService.getBlogById(id);
     }
 
-    @PutMapping("/{id}/update")
+    @PutMapping("/{id}")
     public Blog updateBlog(@RequestBody Blog updatedBlog, @PathVariable Long id) {
         return blogService.updateBlog(updatedBlog, id);
     }
 
-    @DeleteMapping("/{id}/delete")
+    @DeleteMapping("/{id}")
     public void deleteBlog(@PathVariable Long id) {
         blogService.deleteBlog(id);
     }

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card">
+    <h2>{{ id ? 'Edit Post' : 'New Post' }}</h2>
+
+    <div *ngIf="loading">Loading…</div>
+    <div *ngIf="error" class="error">{{ error }}</div>
+
+    <form (ngSubmit)="submit()" [formGroup]="form" *ngIf="!loading">
+      <label>
+        <span>Title *</span>
+        <input type="text" formControlName="title" />
+        <small class="hint" *ngIf="form.get('title')?.touched && form.get('title')?.invalid">
+          Title is required (min 3)
+        </small>
+      </label>
+
+      <label>
+        <span>Author</span>
+        <input type="text" formControlName="author" />
+      </label>
+
+      <label>
+        <span>Content *</span>
+        <textarea rows="10" formControlName="content"></textarea>
+        <small class="hint" *ngIf="form.get('content')?.touched && form.get('content')?.invalid">
+          Content is required (min 10)
+        </small>
+      </label>
+
+      <div class="row">
+        <a class="btn" routerLink="/blogs">Cancel</a>
+        <button class="btn primary" type="submit" [disabled]="saving">
+          {{ saving ? 'Saving…' : (id ? 'Update' : 'Create') }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

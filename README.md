@@ -131,15 +131,16 @@ frontend/
 
 ## Home Page
 
-<img width="1592" height="847" alt="Screenshot 2025-08-21 000506" src="https://github.com/user-attachments/assets/0514623a-ba7f-456c-bf37-cc5438952a02" />
+<img width="1599" height="848" alt="Screenshot 2025-11-01 204706" src="https://github.com/user-attachments/assets/98902df8-8988-46ff-8195-e9cafe1702f7" />
 
 
 ## All Blogs
-<img width="1594" height="848" alt="Screenshot 2025-08-21 000615" src="https://github.com/user-attachments/assets/85a29277-33de-4446-a4b0-cc4f2734f57d" />
+<img width="1599" height="849" alt="Screenshot 2025-11-01 205337" src="https://github.com/user-attachments/assets/d9bfbf42-82b7-4db2-8b17-38700b3b9463" />
+
 
 ## About
 
-<img width="1598" height="762" alt="Screenshot 2025-08-21 000736" src="https://github.com/user-attachments/assets/9d3e1d63-269e-4b93-acf9-a2ed9cdca8f7" />
+<img width="1599" height="848" alt="Screenshot 2025-11-01 205446" src="https://github.com/user-attachments/assets/81af08fd-3bc5-4251-8287-a402e4d88e4e" />
 
 
 
@@ -153,5 +154,6 @@ frontend/
 📫 **GitHub:** @anjalimasali2007
 
 ✉️ **Email:** anjalimasali05@gmail.com
+
 
 
